@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<!-- Troque as fontes pelas do formato base (Google Fonts) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  /* ====== TROQUE PELOS VALORES DO design/formato-base.md ====== */
+  :root {
+    --fundo: #141517;
+    --fundo-2: #1c1e21;
+    --destaque: #ffc90d;
+    --apoio: #00ace2;
+    --texto: #f4f5f6;
+    --texto-suave: #a2a9b1;
+    --botao: #25d366;
+    --botao-texto: #062b16;
+    --fonte-titulo: 'Sora', sans-serif;
+    --fonte-texto: 'Inter', sans-serif;
+  }
+  /* ============================================================ */
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; }
+  body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: var(--fonte-texto);
+    position: relative;
+  }
+  .slide { position: absolute; inset: 0; padding: 72px; display: flex; flex-direction: column; }
+
+  .topo { display: flex; justify-content: space-between; align-items: center; }
+  .logo { height: 64px; width: auto; }
+  .progresso { font-size: 28px; color: var(--texto-suave); font-weight: 600; }
+
+  .foto { margin-top: 48px; height: 560px; border-radius: 28px; overflow: hidden; background: var(--fundo-2); }
+  .foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .conteudo { margin-top: auto; }
+  .etiqueta { display: inline-block; font-size: 28px; font-weight: 600; letter-spacing: 2px;
+              text-transform: uppercase; color: var(--destaque); margin-bottom: 24px; }
+  h1 { font-family: var(--fonte-titulo); font-size: 92px; line-height: 1.04; font-weight: 800; letter-spacing: -1px; }
+  h1 em { font-style: normal; color: var(--destaque); }
+  .apoio { margin-top: 28px; font-size: 38px; line-height: 1.35; color: var(--texto-suave); max-width: 900px; }
+
+  .botao { margin-top: 48px; display: inline-flex; align-items: center; gap: 16px; align-self: flex-start;
+           background: var(--botao); color: var(--botao-texto); font-weight: 600; font-size: 38px;
+           padding: 28px 48px; border-radius: 999px; }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="topo">
+      <!-- Logo: troque pelo caminho do logo da marca -->
+      <img class="logo" src="../../design/logo.png" alt="" onerror="this.style.display='none'">
+      <span class="progresso">1/6</span>
+    </div>
+
+    <!-- Remova o bloco .foto se o slide for só tipográfico -->
+    <div class="foto"><img src="../../design/fotos/exemplo.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+
+    <div class="conteudo">
+      <span class="etiqueta">Dica técnica</span>
+      <h1>Título curto com <em>destaque</em></h1>
+      <p class="apoio">Uma frase de apoio, com no máximo 20 palavras, que explica o título.</p>
+      <!-- Botão só no último slide -->
+      <!-- <span class="botao">Chamar no WhatsApp</span> -->
+    </div>
+  </div>
+</body>
+</html>
